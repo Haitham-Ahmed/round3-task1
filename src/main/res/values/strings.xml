@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">MyMemeApp</string>
+    <string name="name">Haitham Ahmed</string>
+    <string name="age">25 سنة</string>
+    <string name="linkedin_link_text">تابعني على LinkedIn</string>
+    <string name="linkedin_url">https://www.linkedin.com/in/haitham-ahmed-0359372a6/</string>
+</resources>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/meme_part1"
+        android:adjustViewBounds="true" />
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/meme_part2"
+        android:adjustViewBounds="true" />
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/meme_part3"
+        android:adjustViewBounds="true" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="16dp"
+        android:weightSum="2">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/name"
+            android:textSize="20sp"
+            android:gravity="start" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/age"
+            android:textSize="20sp"
+            android:gravity="end" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/linkedinText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/linkedin_link_text"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="22sp"
+        android:gravity="center"
+        android:paddingTop="16dp" />
+
+</LinearLayout>
