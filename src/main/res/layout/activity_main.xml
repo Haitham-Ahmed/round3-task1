@@ -1,66 +1,83 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:padding="16dp">
 
-
     <ImageView
-        android:layout_width="match_parent"
+        android:id="@+id/image1"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
         android:src="@drawable/meme_part1"
-        android:adjustViewBounds="true" />
-
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <ImageView
-        android:layout_width="match_parent"
+        android:id="@+id/image2"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
         android:src="@drawable/meme_part2"
-        android:adjustViewBounds="true" />
-
+        app:layout_constraintTop_toBottomOf="@id/image1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <ImageView
-        android:layout_width="match_parent"
+        android:id="@+id/image3"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
         android:src="@drawable/meme_part3"
-        android:adjustViewBounds="true" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/image2" />
 
-
-    <LinearLayout
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/textName"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="16dp"
-        android:weightSum="2">
+        android:text="@string/name"
+        android:textSize="25sp"
+        android:textColor="@color/cardview_dark_background"
+        android:gravity="start"
+        android:layout_margin="50dp"
+        app:layout_constraintTop_toBottomOf="@id/image3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/textAge" />
 
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/name"
-            android:textSize="20sp"
-            android:gravity="start" />
 
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/age"
-            android:textSize="20sp"
-            android:gravity="end" />
-    </LinearLayout>
+    <TextView
+        android:id="@+id/textAge"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="50dp"
+        android:layout_marginTop="48dp"
+        android:gravity="end"
+        android:text="@string/age"
+        android:textColor="@color/cardview_dark_background"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/textName"
+        app:layout_constraintTop_toBottomOf="@+id/image3" />
 
     <TextView
         android:id="@+id/linkedinText"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_margin="100dp"
+        android:gravity="center"
+        android:paddingTop="16dp"
+        android:paddingRight="100dp"
         android:text="@string/linkedin_link_text"
         android:textColor="@android:color/holo_blue_dark"
-        android:textSize="22sp"
-        android:gravity="center"
-        android:paddingTop="16dp" />
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textName" />
 
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
